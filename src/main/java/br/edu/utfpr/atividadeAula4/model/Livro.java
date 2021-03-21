@@ -38,7 +38,6 @@ public class Livro implements Serializable {
     @JoinColumn(name = "autor_id", referencedColumnName = "id")
     private Autor autor;
 
-    @NotEmpty(message = "O campo 'Ano' deve ser preenchido")
     @NotNull(message = "O campo 'Ano' deve ser preenchido")
     @Column
     private Integer ano;
@@ -52,7 +51,6 @@ public class Livro implements Serializable {
     @JoinColumn(name = "cidade_id", referencedColumnName = "id")
     private Cidade cidade;
 
-    @NotEmpty(message = "O campo 'Valor' deve ser preenchido")
     @NotNull(message = "O campo 'Valor' deve ser preenchido")
     @Column
     private Double valor;
