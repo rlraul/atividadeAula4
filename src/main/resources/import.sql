@@ -23,3 +23,13 @@ INSERT INTO livro (titulo, editora_id, genero_id, autor_id, ano, isbn, cidade_id
 INSERT INTO livro (titulo, editora_id, genero_id, autor_id, ano, isbn, cidade_id, valor) VALUES ('Livro2', 2, 2, 2, 2009, 'isbn2', 2, 50.00);
 INSERT INTO livro (titulo, editora_id, genero_id, autor_id, ano, isbn, cidade_id, valor) VALUES ('Livro3', 3, 3, 3, 1980, 'isbn3', 3, 120.25);
 INSERT INTO livro (titulo, editora_id, genero_id, autor_id, ano, isbn, cidade_id, valor) VALUES ('Livro4', 4, 4, 5, 2010, 'isbn4', 4, 150.50);
+
+INSERT INTO permissao (nome) values('ROLE_ADMIN');
+INSERT INTO permissao (nome) values('ROLE_USER');
+
+INSERT INTO usuario(nome, username, password) VALUES ('Administrador', 'admin','$2a$10$.PVIfB07x.SfMYTcToxL0.yxcLWU0GbS2NUO1W1QAvqMm/TsFhVem');
+INSERT INTO usuario(nome, username, password) VALUES ('Teste', 'teste','$2a$10$.PVIfB07x.SfMYTcToxL0.yxcLWU0GbS2NUO1W1QAvqMm/TsFhVem');
+
+INSERT INTO usuario_permissoes(usuario_id, permissoes_id) VALUES (1, 1);
+INSERT INTO usuario_permissoes(usuario_id, permissoes_id) VALUES (1, 2);
+INSERT INTO usuario_permissoes(usuario_id, permissoes_id) VALUES (2, 2);

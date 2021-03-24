@@ -3,6 +3,7 @@
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
       layout:decorate="~{layout/layout-padrao}">
 <head>
 </head>
@@ -28,7 +29,7 @@
         <a class="btn btn-primary" th:href="@{/}">
             <i class="fa fa-home"></i>
         </a>
-        <a class="btn btn-primary" th:href="@{/livro/new}">
+        <a class="btn btn-primary" th:href="@{/livro/new}" sec:authorize="hasRole('ROLE_ADMIN')">
             <i class="fa fa-plus"></i> Novo
         </a>
 
